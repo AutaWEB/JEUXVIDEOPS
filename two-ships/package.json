@@ -1,0 +1,19 @@
+{
+  "name": "two-ships",
+  "scripts": {
+    "test": "mocha tests",
+    "lint": "eslint src tests",
+    "audit": "npm audit",
+    "serve": "http-server src -p 8080",
+    "cy:run": "cypress run",
+    "test:e2e": "start-server-and-test serve http://localhost:8080 cy:run"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "eslint": "^8.42.0",
+    "eslint-config-google": "^0.14.0",
+    "cypress": "^12.13.0",
+    "http-server": "^14.1.1",
+    "start-server-and-test": "^2.0.0"
+  }
+}

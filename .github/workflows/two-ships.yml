@@ -1,0 +1,32 @@
+name: CI Two Ships
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  ci_two_ships:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./two-ships
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.13.x'
+
+      - run: npm install
+
+      - run: npm run lint
+
+      - run: npm run audit || true
+
+      - run: npm run test
+
+      - run: npm run test:e2e
