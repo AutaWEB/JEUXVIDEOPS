@@ -29,8 +29,8 @@ describe('Two Ships - Nouveaux tests', () => {
   it('lerp(0, 0, 0) = 0', () => {
     assert.strictEqual(lerp(0, 0, 0), 0);
   });
-  it('mapLinear(0, 10, 0, 100, 5) = 50', () => {
-    assert.strictEqual(mapLinear(0, 10, 0, 100, 5), 50);
+  it('mapLinear(5, 0, 10, 0, 100) = 50', () => {
+    assert.strictEqual(mapLinear(5, 0, 10, 0, 100), 50);
   });
   it('randFloatSpread(0) = 0', () => {
     assert.strictEqual(randFloatSpread(0), 0);
