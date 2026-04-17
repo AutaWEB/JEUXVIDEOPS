@@ -29,4 +29,7 @@ jobs:
 
       - run: npm run test
 
+      - name: Install Cypress Binary
+        run: npx cypress install
+
       - run: npm run test:e2e
