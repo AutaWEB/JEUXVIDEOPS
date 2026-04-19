@@ -28,6 +28,11 @@ jobs:
         with:
           path: '.'
 
+      - name: demo de la clé secrete 
+        run: echo "Je sais utiliser la clé : $MON_SECRET"
+        env:
+          MON_SECRET: ${{ secrets.SECRET }}
+
       - name: Déploiement final
         id: deployment
         uses: actions/deploy-pages@v4
